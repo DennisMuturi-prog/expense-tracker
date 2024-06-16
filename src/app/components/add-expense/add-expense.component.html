@@ -1,0 +1,23 @@
+<h1>Add an expense</h1>
+<label for="amount">
+    Amount
+    <input id="amount" type="number"
+    [(ngModel)]="newExpense.amount"/>
+</label>
+<label for="description">Expense description
+    <input id="description" type="text"
+    [(ngModel)]="newExpense.expenseDescription"
+     />
+</label>
+<label for="necessary">
+    Necessary
+    <input id="necessary" type="checkbox" 
+    [(ngModel)]="newExpense.necessary"/>
+</label>
+<label for="necessary">
+    Date
+    <input id="necessary" type="date" [(ngModel)]="newExpense.dateIncurred" />
+</label>
+<button (click)="addExpense()">Add</button>
+
+

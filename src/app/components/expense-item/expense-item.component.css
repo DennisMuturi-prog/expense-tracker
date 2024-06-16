@@ -1,0 +1,11 @@
+.necessary,.unnecessary{
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+}
+.necessary{
+    background-color: green;
+}
+.unnecessary{
+    background-color: red;
+}

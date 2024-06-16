@@ -1,0 +1,81 @@
+{
+  "expenses": [
+    {
+      "id": "1",
+      "amount": 2000,
+      "dateIncurred": "12/12/2024",
+      "expenseDescription": "buying food",
+      "necessary": true
+    },
+    {
+      "id": "2",
+      "amount": 3000,
+      "dateIncurred": "12/11/2024",
+      "expenseDescription": "pay rent",
+      "necessary": false
+    },
+    {
+      "id": "3",
+      "amount": 500,
+      "dateIncurred": "9/11/2024",
+      "expenseDescription": "pay wifi",
+      "necessary": false
+    },
+    {
+      "id": "4",
+      "amount": 4000,
+      "dateIncurred": "12/11/2023",
+      "expenseDescription": "buy clothes",
+      "necessary": false
+    },
+    {
+      "id": "6bdb",
+      "amount": 1007,
+      "dateIncurred": "2024-06-17",
+      "expenseDescription": "Buying chicken",
+      "necessary": true
+    },
+    {
+      "id": "4b42",
+      "amount": 222,
+      "dateIncurred": "2024-06-14",
+      "expenseDescription": "Test Expense",
+      "necessary": true
+    },
+    {
+      "id": "84c0",
+      "amount": 4321,
+      "dateIncurred": "2024-06-04",
+      "expenseDescription": "Buying shoes",
+      "necessary": true
+    },
+    {
+      "id": "d9e3",
+      "amount": 911,
+      "dateIncurred": "4/3/3034",
+      "expenseDescription": "Police",
+      "necessary": true
+    },
+    {
+      "id": "1561",
+      "amount": 200,
+      "dateIncurred": "2024-06-17",
+      "expenseDescription": "Boook cover ",
+      "necessary": true
+    },
+    {
+      "id": "cf75",
+      "amount": 125,
+      "dateIncurred": "2024-06-03",
+      "expenseDescription": "last test",
+      "necessary": true
+    },
+    {
+      "id": "1e58",
+      "amount": 2003,
+      "dateIncurred": "2024-06-03",
+      "expenseDescription": "Observables are different",
+      "necessary": true
+    }
+  ]
+}

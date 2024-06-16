@@ -1,0 +1,4 @@
+<app-add-expense (addExpenseEvent)="addExpense($event)"/>
+@for(expense of expenses;track expense.id){
+    <app-expense-item [expense]="expense"/>
+}
