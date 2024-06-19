@@ -3,28 +3,28 @@
     {
       "id": "1",
       "amount": 2000,
-      "dateIncurred": "12/12/2024",
+      "dateIncurred": "2024-12-12",
       "expenseDescription": "buying food",
       "necessary": true
     },
     {
       "id": "2",
       "amount": 3000,
-      "dateIncurred": "12/11/2024",
+      "dateIncurred": "2024-11-12",
       "expenseDescription": "pay rent",
       "necessary": false
     },
     {
       "id": "3",
       "amount": 3000,
-      "dateIncurred": "9/11/2024",
+      "dateIncurred": "2024-11-9",
       "expenseDescription": "pay wifi",
       "necessary": true
     },
     {
       "id": "4",
       "amount": 4000,
-      "dateIncurred": "12/11/2023",
+      "dateIncurred": "2023-11-12",
       "expenseDescription": "buy clothes",
       "necessary": true
     },
