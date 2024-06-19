@@ -1,0 +1,12 @@
+.active{
+    border-bottom: 2px solid black;
+    color: green;
+    font-size: large;
+}
+nav{
+    display: flex;
+    gap: 10px;
+}
+nav>a{
+    text-decoration: none;
+}

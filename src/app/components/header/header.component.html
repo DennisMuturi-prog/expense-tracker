@@ -1,0 +1,12 @@
+<nav class="nav">
+    <h1>You can track your expenses easily</h1>
+    <button [ngClass]="showAddExpense?'hide':'show'"
+    (click)="toggleAddExpense()">
+    @if(showAddExpense){
+        <span>Hide</span>
+    }
+    @else {
+        <span>Add expense</span>
+    }
+</button>
+</nav>

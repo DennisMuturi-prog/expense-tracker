@@ -1,4 +1,12 @@
-<app-add-expense (addExpenseEvent)="addExpense($event)"/>
-@for(expense of expenses;track expense.id){
-    <app-expense-item [expense]="expense"/>
+<app-header (toggleAddExpenseEvent)="toggleAddExpense($event)"/>
+@if(showAddExpense){
+    <app-add-expense (addExpenseEvent)="addExpense($event)" />
 }
+<div class="expenses">
+@for(expense of expenses;track expense.id){
+    <app-expense-item 
+    (deleteExpenseEvent)="deleteExpense($event)"
+    (updateExpenseEvent)="updateExpense($event)"
+    [expense]="expense"/>
+}
+</div>

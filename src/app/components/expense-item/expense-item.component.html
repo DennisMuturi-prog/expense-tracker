@@ -1,6 +1,22 @@
-<h1>{{expense.expenseDescription}}
-<div  [ngClass]="expense.necessary?'necessary':'unnecessary'"></div></h1>
-<p>id:{{expense.id}}</p>
-<p>amount:{{expense.amount}}</p>
-<p>Date:{{expense.dateIncurred}}</p>
+<div class="expense">
+    @if(showEditExpense){
+    <app-add-expense (editExpenseEvent)="editExpense($event)" functionality="edit" [startingData]="expense" />
+    }
+    <h1>{{expense.expenseDescription}}
+        <div class="buttonGroup">
+            <button (click)="onDeleteExpense()" class="interactDelete">
+                <mat-icon aria-hidden="false" aria-label="Example delete icon" fontIcon="delete"></mat-icon>
+            </button>
+            <button (click)="onToggleEdit()" class="interactUpdate">
+                <mat-icon aria-hidden="false" aria-label="Example edit icon" fontIcon="edit"></mat-icon>
+            </button>
+        
+        </div>
+    </h1>
+    <div class="necessity"><b>necessity</b>
+    <div [ngClass]="expense.necessary?'necessary':'unnecessary'"></div></div>
+    <p>id:<b>{{expense.id}}</b></p>
+    <p>amount:<b>${{expense.amount}}</b></p>
+    <p>Date:<b>{{expense.dateIncurred}}</b></p>
+</div>
 

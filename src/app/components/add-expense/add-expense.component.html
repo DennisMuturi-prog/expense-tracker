@@ -1,23 +1,82 @@
-<h1>Add an expense</h1>
-<label for="amount">
-    Amount
-    <input id="amount" type="number"
-    [(ngModel)]="newExpense.amount"/>
-</label>
-<label for="description">Expense description
-    <input id="description" type="text"
-    [(ngModel)]="newExpense.expenseDescription"
-     />
-</label>
-<label for="necessary">
-    Necessary
-    <input id="necessary" type="checkbox" 
-    [(ngModel)]="newExpense.necessary"/>
-</label>
-<label for="necessary">
-    Date
-    <input id="necessary" type="date" [(ngModel)]="newExpense.dateIncurred" />
-</label>
-<button (click)="addExpense()">Add</button>
+@if(functionality=='add'){
+    <h1>Add an expense</h1>
+}
+@else{
+    <h1>update this expense</h1>
+}
+<form #myForm="ngForm">
+    <div class="myForm">
+        <div class="formItem">
+            <label for="amount">
+                Amount
+            </label>
+            <input id="amount" type="number" [(ngModel)]="newExpense.amount"
+            required min="1"
+            name="amount"
+            #amount="ngModel"
+             />
+             @if (amount.invalid&&(amount.dirty || amount.touched)) {
+                <div class="alert">
+                    @if (amount.hasError('required')) {
+                        <div>Amount is required</div>
+                    }
+                    @if (amount.hasError('min')) {
+                        <div>Enter amount above zero</div>
+                    }
+                </div>
+             }
+        </div>
+        <div class="formItem">
+            <label for="description">Expense description
+            </label>
+            <input id="description" type="text" [(ngModel)]="newExpense.expenseDescription"
+            required
+            name="description"
+            minlength="5"
+            #description="ngModel" />
+            @if (description.invalid&&(description.dirty || description.touched)) {
+            <div class="alert">
+                @if (description.hasError('required')) {
+                <div>description is required</div>
+                }
+                @if (description.hasError('minlength')) {
+                <div>Give a word or sentence describing it</div>
+                }
+            </div>
+            }
+        </div>
+        <div class="formItem">
+            <label for="necessary">
+                Necessity
+            </label>
+            <input id="necessary" type="checkbox" [(ngModel)]="newExpense.necessary"
+            name="necessary"/>
+        </div>
+        <div class="formItem">
+            <label for="date">
+                Date
+            </label>
+            <input id="date" type="date" [(ngModel)]="newExpense.dateIncurred"
+            required
+            name="date"
+            #date="ngModel" />
+            @if (date.invalid&&(date.dirty || date.touched)) {
+            <div class="alert">
+                @if (date.hasError('required')) {
+                <div>Date of expense is required</div>
+                }
+            </div>
+            }
+        </div>
+        @if(functionality=='add'){
+            <div class="formItem addBtn"><button (click)="addExpense(myForm)" [ngClass]="myForm.valid?'':'disAbledBtn'"
+                    [disabled]="myForm.invalid">Add</button></div>
+        }
+        @else {
+            <div class="formItem addBtn"><button (click)="updateExpense()" [ngClass]="myForm.valid?'':'disAbledBtn'"
+                    [disabled]="myForm.invalid">update</button></div>
+        }
+    </div>
+</form>
 
 

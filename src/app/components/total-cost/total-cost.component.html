@@ -1,0 +1,11 @@
+<p>total-cost works{{totalcost}}</p>
+<table mat-table [dataSource]="expenses">
+<mat-text-column name="id"></mat-text-column>
+<mat-text-column name="expenseDescription"></mat-text-column>
+<mat-text-column name="dateIncurred"></mat-text-column>
+<mat-text-column name="necessary"></mat-text-column>
+<mat-text-column name="amount"></mat-text-column>
+
+<tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+<tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+</table>

@@ -1,6 +1,6 @@
 .necessary,.unnecessary{
-    width:20px;
-    height:20px;
+    width:15px;
+    height:15px;
     border-radius: 50%;
 }
 .necessary{
@@ -8,4 +8,39 @@
 }
 .unnecessary{
     background-color: red;
+}
+.expense{
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding-left: 15px;
+}
+.necessity{
+    display: flex;
+    gap:5px;
+}
+.interactDelete{
+    color: grey;
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.interactDelete:hover{
+    color: red;
+}
+.interactUpdate:hover{
+    color: black;
+}
+.interactUpdate{
+    color: grey;
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.buttonGroup{
+    margin-top: auto;
 }
