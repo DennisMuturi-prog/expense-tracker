@@ -37,15 +37,6 @@ export class ExpensesComponent {
     this.showAddExpense=newShow
   }
   updateExpense(updatedExpense:Expense){
-    this.expensesService.updateExpense(updatedExpense).subscribe((res)=>{
-      this.expenses.map((expense)=>{
-        if(res.id==expense.id){
-          return res;
-        }
-        else{
-          return expense
-        }
-      })
-    })
+    this.expensesService.updateExpense(updatedExpense).subscribe()
   }
 }

@@ -2,7 +2,7 @@
   "expenses": [
     {
       "id": "1",
-      "amount": 2000,
+      "amount": 2100,
       "dateIncurred": "2024-12-12",
       "expenseDescription": "buying food",
       "necessary": true
@@ -12,7 +12,7 @@
       "amount": 3000,
       "dateIncurred": "2024-11-12",
       "expenseDescription": "pay rent",
-      "necessary": false
+      "necessary": true
     },
     {
       "id": "3",
@@ -26,21 +26,21 @@
       "amount": 4000,
       "dateIncurred": "2023-11-12",
       "expenseDescription": "buy clothes",
-      "necessary": true
+      "necessary": false
     },
     {
       "id": "6bdb",
       "amount": 1007,
       "dateIncurred": "2024-06-17",
       "expenseDescription": "Buying chicken",
-      "necessary": true
+      "necessary": false
     },
     {
       "id": "f3d4",
       "amount": 200,
       "dateIncurred": "2024-06-18",
       "expenseDescription": "buy tissue",
-      "necessary": true
+      "necessary": false
     }
   ]
 }
