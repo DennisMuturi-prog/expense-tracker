@@ -19,7 +19,7 @@
       "amount": 3000,
       "dateIncurred": "2024-11-9",
       "expenseDescription": "pay wifi",
-      "necessary": true
+      "necessary": false
     },
     {
       "id": "4",
