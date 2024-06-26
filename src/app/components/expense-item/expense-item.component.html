@@ -17,6 +17,6 @@
     <div [ngClass]="expense.necessary?'necessary':'unnecessary'"></div></div>
     <p>id:<b>{{expense.id}}</b></p>
     <p>amount:<b>${{expense.amount}}</b></p>
-    <p>Date:<b>{{expense.dateIncurred}}</b></p>
+    <p>Date:<b>{{expense.dateIncurred | date}}</b></p>
 </div>
 
