@@ -5,9 +5,9 @@ import { ExpensesComponent } from './components/expenses/expenses.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export const routes: Routes = [
-    {path:'home',component:ExpensesComponent},
-    {path:'totalCost',component:TotalCostComponent},
-    {path:'necessityIndex',component:NecessityIndexComponent},
+    {path:'home',component:ExpensesComponent, title:'home'},
+    {path:'totalCost',component:TotalCostComponent,title:'totalCost'},
+    {path:'necessityIndex',component:NecessityIndexComponent,title:'necessity'},
     {path:'',redirectTo:'/home',pathMatch:'full'},
-    {path:'**',component:PageNotFoundComponent}
+    {path:'**',component:PageNotFoundComponent,title:'notfound'}
 ];
