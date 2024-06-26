@@ -3,11 +3,12 @@ import { Expense } from '../../Types/ExpenseType';
 import { NgClass } from '@angular/common';
 import {MatIconModule} from '@angular/material/icon'
 import { AddExpenseComponent } from '../add-expense/add-expense.component';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-expense-item',
   standalone: true,
-  imports: [NgClass,MatIconModule,AddExpenseComponent],
+  imports: [NgClass,MatIconModule,AddExpenseComponent,DatePipe],
   templateUrl: './expense-item.component.html',
   styleUrl: './expense-item.component.css'
 })
