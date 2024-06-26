@@ -2,7 +2,7 @@
   "expenses": [
     {
       "id": "1",
-      "amount": 2100,
+      "amount": 2500,
       "dateIncurred": "2024-12-12",
       "expenseDescription": "buying food",
       "necessary": true
@@ -23,7 +23,7 @@
     },
     {
       "id": "4",
-      "amount": 4000,
+      "amount": 4500,
       "dateIncurred": "2023-11-12",
       "expenseDescription": "buy clothes",
       "necessary": false
