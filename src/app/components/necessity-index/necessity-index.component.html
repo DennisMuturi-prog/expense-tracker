@@ -1,6 +1,6 @@
 <h1>Necessary Expenditures</h1>
 <div class="necessaryExpenses">
-    @for(expense of necessaryExpenses();track expense.id){
+    @for(expense of necessaryExpenses$ | async;track expense.id){
         <app-expense-item [expense]="expense"
         (deleteExpenseEvent)="deleteExpense($event)"
         (updateExpenseEvent)="updateExpense($event)"/>
@@ -8,7 +8,7 @@
 </div>
 <h1>unnecessary Expenses</h1>
 <div class="unnecessaryExpenses">
-    @for(expense of unnecessaryExpenses();track expense.id){
+    @for(expense of unnecessaryExpenses$ | async;track expense.id){
     <app-expense-item [expense]="expense" (deleteExpenseEvent)="deleteExpense($event)"
         (updateExpenseEvent)="updateExpense($event)" />
     }
