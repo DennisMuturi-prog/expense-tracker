@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, model } from '@angular/core';
 import { NgClass } from '@angular/common';
 
 @Component({
@@ -9,10 +9,5 @@ import { NgClass } from '@angular/common';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  @Output() toggleAddExpenseEvent=new EventEmitter<boolean>()
-  showAddExpense:boolean=false
-  toggleAddExpense(){
-    this.showAddExpense=!this.showAddExpense
-    this.toggleAddExpenseEvent.emit(this.showAddExpense)
-  }
+  showAddExpense=model(false) 
 }
