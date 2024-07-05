@@ -3,7 +3,7 @@
     <app-add-expense (addExpenseEvent)="addExpense($event)" />
 }
 <div class="expenses">
-@for(expense of expenses;track expense.id){
+@for(expense of expenses$ | async;track expense.id){
     <app-expense-item 
     (deleteExpenseEvent)="deleteExpense($event)"
     (updateExpenseEvent)="updateExpense($event)"
