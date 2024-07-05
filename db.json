@@ -11,7 +11,7 @@
       "id": "2",
       "amount": 2500,
       "dateIncurred": "2024-11-12",
-      "expenseDescription": "pay rent",
+      "expenseDescription": "pay house rent",
       "necessary": true
     },
     {
@@ -19,14 +19,28 @@
       "amount": 3000,
       "dateIncurred": "2024-11-9",
       "expenseDescription": "pay wifi",
-      "necessary": false
+      "necessary": true
     },
     {
       "id": "1a14",
       "amount": 1200,
       "dateIncurred": "2024-07-05",
       "expenseDescription": "Testing rxjs",
-      "necessary": true
+      "necessary": false
+    },
+    {
+      "id": "c6e8",
+      "amount": 345,
+      "dateIncurred": "2024-07-06",
+      "expenseDescription": "testing if everything is good",
+      "necessary": false
+    },
+    {
+      "id": "3333",
+      "amount": 2200,
+      "dateIncurred": "2024-08-01",
+      "expenseDescription": "Looking at model signal",
+      "necessary": false
     }
   ]
 }
