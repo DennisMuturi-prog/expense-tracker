@@ -1,9 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject,signal } from '@angular/core';
-import { BehaviorSubject, EMPTY, Observable, Subject, combineLatest, map, merge, of, scan, switchMap} from 'rxjs';
-import { Expense, ModifyAction } from '../Types/ExpenseType';
-import { tap } from 'rxjs';
-import { Action } from 'rxjs/internal/scheduler/Action';
+import { Observable, Subject, map, merge,scan, shareReplay, switchMap} from 'rxjs';
+import { Expense} from '../Types/ExpenseType';
 
 @Injectable({
   providedIn: 'root',
@@ -29,13 +27,7 @@ export class ExpensesService {
   }
   updateHandler(expense: Expense) {
     return (state: Expense[]) => [
-      ...state.map((expenseitem) => {
-        if (expenseitem.id == expense.id) {
-          return expense;
-        } else {
-          return expenseitem;
-        }
-      }),
+      ...state.map((expenseitem) => expenseitem.id==expense.id?expense:expenseitem),
     ];
   }
   addHandler(expense: Expense) {
@@ -54,7 +46,8 @@ export class ExpensesService {
     scan(
       (state:Expense[],stateHandler)=>stateHandler(state),
       []
-    )
+    ),
+    shareReplay(1)
   )
   getExpenses(): Observable<Expense[]> {
     return this.http.get<Expense[]>('http://localhost:3000/expenses');
