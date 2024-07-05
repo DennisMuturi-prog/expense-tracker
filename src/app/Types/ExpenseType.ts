@@ -5,3 +5,7 @@ export interface Expense{
     expenseDescription:string,
     necessary:boolean
 }
+export interface ModifyAction{
+    action:string,
+    expensedata:Expense
+}
