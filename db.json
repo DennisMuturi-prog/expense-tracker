@@ -9,7 +9,7 @@
     },
     {
       "id": "2",
-      "amount": 3000,
+      "amount": 2500,
       "dateIncurred": "2024-11-12",
       "expenseDescription": "pay rent",
       "necessary": true
@@ -22,25 +22,11 @@
       "necessary": false
     },
     {
-      "id": "4",
-      "amount": 4500,
-      "dateIncurred": "2023-11-12",
-      "expenseDescription": "buy clothes",
-      "necessary": false
-    },
-    {
-      "id": "6bdb",
-      "amount": 1007,
-      "dateIncurred": "2024-06-17",
-      "expenseDescription": "Buying chicken",
-      "necessary": false
-    },
-    {
-      "id": "f3d4",
-      "amount": 200,
-      "dateIncurred": "2024-06-18",
-      "expenseDescription": "buy tissue",
-      "necessary": false
+      "id": "1a14",
+      "amount": 1200,
+      "dateIncurred": "2024-07-05",
+      "expenseDescription": "Testing rxjs",
+      "necessary": true
     }
   ]
 }
