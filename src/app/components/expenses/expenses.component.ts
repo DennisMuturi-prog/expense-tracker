@@ -25,9 +25,6 @@ export class ExpensesComponent {
   deleteExpense(expenseId:string | number){
     this.expensesService.deleteExpenseAction$.next(expenseId)
   }
-  toggleAddExpense(newShow:boolean){
-    this.showAddExpense=newShow
-  }
   updateExpense(updatedExpense:Expense){
     this.expensesService.updateExpenseAction$.next(updatedExpense)
   }
