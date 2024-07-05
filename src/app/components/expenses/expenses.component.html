@@ -1,4 +1,4 @@
-<app-header (toggleAddExpenseEvent)="toggleAddExpense($event)"/>
+<app-header [(showAddExpense)]="showAddExpense"/>
 @if(showAddExpense){
     <app-add-expense (addExpenseEvent)="addExpense($event)" />
 }
